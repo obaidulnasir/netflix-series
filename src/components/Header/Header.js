@@ -1,9 +1,11 @@
 import React from 'react';
+import "./Header.css"
 
 const Header = () => {
     return (
-        <div>
-            <h3 className="text-center">The Furious</h3>
+        <div className="text-center text-light container header">
+            <h3>The Furious</h3>
+            <h2>Total Budget: 9500000$</h2>
         </div>
     );
 };

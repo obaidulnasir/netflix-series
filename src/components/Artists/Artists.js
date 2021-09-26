@@ -6,7 +6,7 @@ const Artists = () => {
   const [artist, setArtist] = useState([]);
   const [picked, setPicked]=useState([])
   useEffect(() => {
-    fetch("./netflix-series.json")
+    fetch("./netflix.json")
       .then((res) => res.json())
       .then((data) => setArtist(data));
   }, []);
@@ -22,7 +22,7 @@ const Artists = () => {
         <div className="row">
           <div className="col-md-9">
             <div className="row">
-                <h3>{artist.length}</h3>
+                
                 {
                 artist.map(artist=><Artist eventHandle={eventHandle} artist={artist} key={artist.key}>
 

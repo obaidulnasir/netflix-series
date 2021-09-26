@@ -1,12 +1,20 @@
 import React from 'react';
+import "./Cart.css"
 
 const Cart = (props) => {
-   
+   const {picked}= props;
+   let total = 0;
+   for (const salary of picked){
+       total =total + salary.salary;
+   }
     
     return (
-        <div>
-            <h3>total: {props.picked.length}</h3>
-            <h3>salary : {props.picked.demandPerSeries}</h3>
+        <div className="cart">
+           <h3> Selected Artist & Cost </h3> 
+            <hr />
+            <h4>Total Actor Select: {props.picked.length}</h4>
+            
+            <h5>Total salary : {total}$</h5>
             
         </div>
     );
