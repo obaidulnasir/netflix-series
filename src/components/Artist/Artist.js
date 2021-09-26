@@ -1,7 +1,8 @@
 import React from "react";
 
 const Artist = (props) => {
-   const{name, phone, email}= props.artist;
+   const{name, phone, demandPerSeries, email}= props.artist;
+  //  console.log(props);
 
   return (
         <div className="col-sm-4 mb-3">
@@ -14,9 +15,8 @@ const Artist = (props) => {
               <p className="card-text">
                 {phone}
               </p>
-              <a href="#" className="btn btn-primary">
-                button
-              </a>
+              <p>{demandPerSeries}</p>
+              <button onClick={()=>props.eventHandle(props.artist)} className="btn btn-info">Pick this person</button>
             </div>
           </div>
         </div>    
